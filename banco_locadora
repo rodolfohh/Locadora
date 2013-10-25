@@ -1,0 +1,76 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tempo de GeraÃ§Ã£o: Out 25, 2013 as 01:36 AM
+-- VersÃ£o do Servidor: 5.5.8
+-- VersÃ£o do PHP: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Banco de Dados: `locadora_trabalho`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `endereco`
+--
+
+CREATE TABLE IF NOT EXISTS `endereco` (
+  `id_endereco` int(11) NOT NULL,
+  `cidade` varchar(45) DEFAULT NULL,
+  `cep` varchar(45) DEFAULT NULL,
+  `rua` varchar(45) DEFAULT NULL,
+  `bairro` varchar(45) DEFAULT NULL,
+  `complemento` varchar(45) DEFAULT NULL,
+  `numero` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_endereco`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `endereco`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcionario`
+--
+
+CREATE TABLE IF NOT EXISTS `funcionario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) DEFAULT NULL,
+  `telfixo` varchar(45) DEFAULT NULL,
+  `telcel` varchar(45) DEFAULT NULL,
+  `sexo` varchar(45) DEFAULT NULL,
+  `rg` varchar(45) DEFAULT NULL,
+  `cpf` varchar(45) DEFAULT NULL,
+  `datanascimento` date DEFAULT NULL,
+  `idade` int(11) DEFAULT NULL,
+  `salario` double DEFAULT NULL,
+  `ctps` varchar(45) DEFAULT NULL,
+  `login` varchar(45) DEFAULT NULL,
+  `senha` varchar(45) DEFAULT NULL,
+  `dataadmissao` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Extraindo dados da tabela `funcionario`
+--
+
+INSERT INTO `funcionario` (`id`, `nome`, `telfixo`, `telcel`, `sexo`, `rg`, `cpf`, `datanascimento`, `idade`, `salario`, `ctps`, `login`, `senha`, `dataadmissao`) VALUES
+(8, '1222', '1', '1', 'Feminino', NULL, '1', NULL, 0, 0, '', '1', '1', '1000-10-10'),
+(9, 'Rodolfo hahn', '36671480', '99265905', 'Masculino', NULL, '11111', NULL, 0, 0, '11111111', 'rodolfohh', 'rodolfohh', '2009-10-10'),
+(10, 'Rodolfo hahn', '36671480', '99265905', 'Masculino', NULL, '11111', NULL, 0, 0, '11111111', 'rodolfohh', 'rodolfohh', '2009-10-10'),
+(11, 'jana', '1', '19', 'Feminino', NULL, '29', NULL, 0, 191, '191', '29', '29', '2021-08-20');
